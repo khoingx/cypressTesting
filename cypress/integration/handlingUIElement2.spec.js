@@ -12,7 +12,11 @@ describe('Interact with UI', ( )=> {
 
         cy.get('#checkbox3').check().should('be.checked').and('have.value',"Hockey") // verify checkbox with value
 
-        
+        //untick a checkbox
+
+        cy.get('#checkbox1').uncheck().should('not.be.checked')
+
+
 
     })
 })
