@@ -12,6 +12,9 @@ describe('UI Element', () => {
 
         cy.get('input[name="login"]').should('be.visible').click() // sign in to the account
 
-        
+        cy.title().should('eq', 'Find a flight: Mercury Tours:')   //title verification
+
+        cy.get('input[value="roundtrip"]').should('be.visible').should('be.checked')   //verify radio buttons
+
     })
 })
