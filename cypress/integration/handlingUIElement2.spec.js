@@ -7,5 +7,12 @@ describe('Interact with UI', ( )=> {
         cy.get('#btn2').should('be.visible').click() // click on skip sign in button
 
         cy.title().should('eq', "Register") // verify title of the new page
+
+        cy.get('#checkbox1').check().should('be.checked').and('have.value',"Cricket") // verify checkbox with value
+
+        cy.get('#checkbox3').check().should('be.checked').and('have.value',"Hockey") // verify checkbox with value
+
+        
+
     })
 })
