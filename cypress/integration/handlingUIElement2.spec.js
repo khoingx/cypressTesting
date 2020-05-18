@@ -14,9 +14,13 @@ describe('Interact with UI', ( )=> {
 
         //untick a checkbox
 
-        cy.get('#checkbox1').uncheck().should('not.be.checked')
+        // cy.get('#checkbox1').uncheck().should('not.be.checked')
 
+        cy.get('input[type="checkbox"]').uncheck(['Cricket', 'Hockey'])
 
+    })
+
+    it('verify dropdown and all', () => {
 
     })
 })
