@@ -15,14 +15,18 @@ describe('UI Element', () => {
         cy.title().should('eq', 'Find a flight: Mercury Tours:')   //title verification
 
         // Working with radio button
-        
+
         cy.get('input[value="roundtrip"]').should('be.visible').should('be.checked')   //verify radio buttons, check if round trip option is selected
 
         cy.get('input[value="oneway"]').should('be.visible').should('not.be.checked').click()   //veriry one way option then select it
 
         cy.get('input[name="findFlights"]').should('be.visible').click() // click on search flight button
 
+        //verify new page title
 
+        cy.title().should('eq','Select a flight: Mecury Tours')
+
+        
 
 
     })
