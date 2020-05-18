@@ -12,7 +12,7 @@ describe('UI Element', () => {
 
         cy.get('input[name="login"]').should('be.visible').click() // sign in to the account
 
-        cy.title().should('eq', 'Find a flight: Mercury Tours:')   //title verification
+        cy.title().should('contain', 'Mercury Tours:')   //title verification
 
         // Working with radio button
 
@@ -24,7 +24,7 @@ describe('UI Element', () => {
 
         //verify new page title
 
-        cy.title().should('eq','Select a flight: Mecury Tours')
+        cy.title().should('contain','Select a Flight')
 
         
 
