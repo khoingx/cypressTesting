@@ -1,7 +1,8 @@
 /// <reference types="cypress" />
 
-describe('Interact with UI', ( )=> {
+describe('Interact with UI', ()=> {
     it('verify checkboxes and all', () => {
+
         cy.visit('http://demo.automationtesting.in/') // go to the URL
 
         cy.get('#btn2').should('be.visible').click() // click on skip sign in button
@@ -16,11 +17,12 @@ describe('Interact with UI', ( )=> {
 
         // cy.get('#checkbox1').uncheck().should('not.be.checked')
 
-        cy.get('input[type="checkbox"]').uncheck(['Cricket', 'Hockey'])
+        cy.get('input[type="checkbox"]').uncheck(['Cricket', 'Hockey']).should('not.be.checked')
+
 
     })
 
-    it('verify dropdown and all', () => {
+    // it('verify dropdown and all', () => {
 
-    })
+    // })
 })
