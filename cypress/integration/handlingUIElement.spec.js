@@ -10,5 +10,8 @@ describe('UI Element', () => {
 
         cy.get('input[name="password"]').should('be.visible').should('be.enabled').type("mercury") //verify password input and input password
 
+        cy.get('input[name="login"]').should('be.visible').click() // sign in to the account
+
+        
     })
 })
