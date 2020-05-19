@@ -3,11 +3,13 @@
 describe('Interact with UI', ()=> {
     it('verify checkboxes and all', () => {
 
-        cy.visit('http://demo.automationtesting.in/') // go to the URL
+        // cy.visit('http://demo.automationtesting.in/') // go to the URL
 
-        cy.get('#btn2').should('be.visible').click() // click on skip sign in button
+        // cy.get('#btn2').should('be.visible').click() // click on skip sign in button
 
-        cy.title().should('eq', "Register") // verify title of the new page
+        // cy.title().should('eq', "Register") // verify title of the new page
+
+        cy.visit('http://demo.automationtesting.in/Register.html') // go to the URL
 
         cy.get('#checkbox1').check().should('be.checked').and('have.value',"Cricket") // verify checkbox with value
 
