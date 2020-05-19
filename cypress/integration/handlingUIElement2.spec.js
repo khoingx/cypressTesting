@@ -32,6 +32,9 @@ describe('Interact with UI', ()=> {
     })
 
     it('verify dynamic dropdown', () => {
-        
+
+        cy.get('#msdd').click()
+        cy.get('.ui-corner-all').contains('English').click()
+        cy.get('.ui-corner-all').contains('Vietnamese').click()
     })
 })
