@@ -24,7 +24,14 @@ describe('Interact with UI', ()=> {
 
     })
 
-    // it('verify dropdown and all', () => {
+    it('verify static dropdown and all', () => {
+        
+        //static dropdown has <select> tag in its HTML tag
+        cy.get('#Skills').select('Android').should('have.value', 'Android') //select an option and verify the value
 
-    // })
+    })
+
+    it('verify dynamic dropdown', () => {
+        
+    })
 })
