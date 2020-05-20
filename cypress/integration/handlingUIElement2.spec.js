@@ -41,7 +41,9 @@ describe('Interact with UI', ()=> {
     it('select country from a dropdown', () => {
 
         cy.get('[role="combobox"]').click() // click on the target dropdown
-        
+        cy.get('.select2-search__field').type('jap')
+        cy.get('.select2-search__field').type('{enter}')
+
 
     })
 })
