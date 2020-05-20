@@ -40,10 +40,10 @@ describe('Interact with UI', ()=> {
 
     it('select country from a dropdown', () => {
 
-        cy.get('[role="combobox"]').click() // click on the target dropdown
+        cy.get('[role="combobox"]').click({force: true}) // click on the target dropdown
         cy.get('.select2-search__field').type('jap')
-        cy.get('.select2-search__field').type('{enter}')
-
+        cy.get('.select2-search__field').type('{enter}') //hit Enter to select the option
+        cy.get('.select2-selection__rendered').should('contain', 'Japan') //verify if text in box is what expected
 
     })
 })
