@@ -37,4 +37,11 @@ describe('Interact with UI', ()=> {
         cy.get('.ui-corner-all').contains('English').click()
         cy.get('.ui-corner-all').contains('Vietnamese').click()
     })
+
+    it('select country from a dropdown', () => {
+
+        cy.get('[role="combobox"]').click() // click on the target dropdown
+        
+
+    })
 })
