@@ -11,6 +11,7 @@ describe('Table Handling Test Suite', ()=> {
         cy.get('table[name="BookTable"] > tbody > tr:nth-child(2) > td:nth-child(3)').contains('Selenium').should('be.visible')
 
         //Grab a book name of which author is "amod"
+      //  cy.get('table[name="BookTable"] > tbody > tr td:nth-child(2)').each()
         cy.get('table[name="BookTable"] > tbody > tr td:nth-child(2)').each(($e,index,$list) => {
 
             var text = $e.text();
