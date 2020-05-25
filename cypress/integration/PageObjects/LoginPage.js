@@ -14,10 +14,17 @@ class LoginPage {
     }
 
     fillPass(password) {
-        const passField = cy.get('input[name="Password')
+        const passField = cy.get('input[name="Password"]')
         passField.clear()
         passField.type(password)
         return this
     }
 
+    submit() {
+        const button = cy.get('input[type="submit"]')
+        button.click()
+    }
+
 }
+
+export default LoginPage
